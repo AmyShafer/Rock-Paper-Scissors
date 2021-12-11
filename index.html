@@ -3,20 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet">
     </head>
     <body>
+      <main>
         <h1>Rock Paper Scissors</h1>
 
         <h2>It's the HUMAN against the MACHINE!</h2>
 
-        <section class="scoreBoard">
+        <!-- The human gif for the left side -->
+        <iframe src="https://giphy.com/embed/p4ga6qHRTc6GU0DiXg" width="250" height="250" frameBorder="0" id="humanGif" class="giphy-embed" allowFullScreen></iframe>
 
-          <iframe src="https://giphy.com/embed/p4ga6qHRTc6GU0DiXg" width="250" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-        
-          <p>Let's Play!</p>
+         <!-- The machine gif for the right side -->
+        <iframe src="https://giphy.com/embed/oUEshJh9D6P4GUXLPW" width="250" height="250" frameBorder="0" id="machineGif" class="giphy-embed" allowFullScreen></iframe>
+    
+        <!-- The Game! -->  
+        <section class="game" id="game">
+          <h4>Let's Play!</h4>
+          <p>Choose One:</p>
+            <ul>  
+              <li><img src="assets/images/rock.jpg" alt="Picture of a Rock"></li>
+              <li><img src="assets/images/paper.png" alt="Picture of Paper"></li>
+              <li><img src="assets/images/scissors.png" alt="Picture of Scissors"></li>
+            </ul>  
+        </section>
+
+      <main>
+
+        <!-- This is the Scoreboard -->
+        <section class="scoreBoard">
           
           <section id="#humanScore" class="humanScore">
             <h3>HUMAN WINS</h3>
@@ -26,10 +43,8 @@
             <h3>MACHINE WINS</h3>
           </section>
 
-          <iframe src="https://giphy.com/embed/oUEshJh9D6P4GUXLPW" width="250" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-
         </section>
 
-        <script src="script.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>

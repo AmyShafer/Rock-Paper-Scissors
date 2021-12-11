@@ -1,5 +1,5 @@
 
-function rockPaperScissors() {
+function rockPaperScissors(humanPick) {
   window.alert("Welcome to Rock, Paper, Scissors!");
 
   var humanPick = window.prompt("Pick R, P, or S!", "");
