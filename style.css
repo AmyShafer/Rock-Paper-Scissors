@@ -1,0 +1,87 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    background-color: #868F96;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 15px auto 15px auto;
+    justify-content: center;
+    align-items: center;
+    color: #233357;
+    font-family: 'Poller One', cursive;
+    font-size: 3em;
+    text-align: center;
+    padding: 30px;
+    border: 6px dotted #69d6cb;
+    border-radius: 15px;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 35px auto 35px auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #69d6cb;
+    color: #233357;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h3 {
+    color: #233357;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+}
+
+.scoreBoard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.humanScore {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 150px;
+    margin: 10px auto 10px auto;
+    justify-content: center;
+    background-color: #74aa7e;
+    padding: 10px;
+    border: 6px solid #69d6cb;
+    box-shadow: 10px 5px 5px #233357;
+    border-radius: 20px;
+}
+
+.machineScore {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+    height: 150px;
+    margin: 10px auto 10px auto;
+    justify-content: center;
+    background-color: #74aa7e;
+    padding: 10px;
+    border: 6px solid #69d6cb;
+    box-shadow: 10px 5px 5px #233357;
+    border-radius: 20px;
+}
