@@ -1,45 +1,38 @@
 
 function rockPaperScissors(humanPick) {
-  window.alert("Welcome to Rock, Paper, Scissors!");
-
-  var humanPick = window.prompt("Pick R, P, or S!", "");
-  var computerPick = computerPlay(2);
+  
   var gameOutcome = humanPick + computerPick;
   var humanWins = ["RS", "PR", "SP"];
   var computerWins = ["RP", "PS", "SR"]; 
+  var humanTally = 0;
+  var machineTally = 0;
 
   // These two variables are checking if the possible outcomes are in either the 
   // humanWins array or the computerWins array by using indexOf
   var didHumanWin = humanWins.indexOf(gameOutcome) > -1;
   var didComputerWin = computerWins.indexOf(gameOutcome) > -1;
 
-  var winTotals = {
-    humanWinCount: 0,
-    computerWinComputer: 0
-  }
-
   if (humanPick === computerPick) {
-  message = " ~~~~~ It's a Tie! ~~~~~ ";
+    document.getElementsByTagName("humanGifTie").style.display = flex;
+    document.getElementsByTagName("MachineGifTie").style.display = flex;
   } else if (didHumanWin) {
-    message = " ~~~~~ THE HUMAN WINS! ~~~~~ ";
-    winTotals.humanWinCount++;
+    document.getElementsByTagName("humanGifWin").style.display = flex;
+    document.getElementsByTagName("MachineGifLose").style.display = flex;
   } else if (didComputerWin) {
-    message = " ~~~~~ THE MACHINE WINS! ~~~~~ ";
-    winTotals.computerWinCount++;
+    document.getElementsByTagName("humanGifLose").style.display = flex;
+    document.getElementsByTagName("MachineGifWin").style.display = flex;
   } else {
-    message = " --x-- Invalid Pick --x--";
+    document.getElementsByTagName("humanGifInvalid").style.display = flex;
+    document.getElementsByTagName("MachineGifInvalid").style.display = flex;
   }
 
-  // The pop-up tells you the outcome of the game you played
-  window.confirm(message);
-
-  return winTotals;
+  return displayScoreboardUpdate(humanTally, machineTally);
 }
 
 // Helper Function
 function computerPlay(num) {
   var play = "X";
-  var getNumber = Math.ceil(Math.random() * num);
+  var getNumber = Math.floor(Math.random() * num);
 
     if (getNumber === 0) {
       play = "R";
@@ -54,8 +47,13 @@ function computerPlay(num) {
   return play;
 }
 
-var result1 = rockPaperScissors();
-console.log(result1);
+function displayScoreboardUpdate (addHuman, addMachine) {
+  
+
+  
+}
+
+rockPaperScissors();
 
 
 

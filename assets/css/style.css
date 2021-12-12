@@ -1,6 +1,6 @@
 * {
-    margin: 5px;
-    padding: 5px;
+    margin: 2px;
+    padding: 2px;
 }
 
 :root {
@@ -8,7 +8,7 @@
   --darkBlue: #233357;
   --mint: #69d6cb;
   --sageGreen: #74aa7e;
-  --salmon: #f36465
+  --salmon: #f36465;
   --burlywood:  burlywood;
   --darkBrown: #331403;
 }
@@ -51,14 +51,79 @@ h2 {
     border-radius: 20px;
 }
 
-#humanGif {
-  position: absolute;  
-  left: 7px;
+.giphy-embed {
+    width: 250px;
+    height: 250px;
 }
 
-#machineGif {
-  position: absolute;  
-  right: 7px;
+/* Human Start GIF */
+#humanGifStart {
+    position: absolute;  
+    left: 16px;
+    display: flex;
+}
+  
+/* Machine Start GIF */
+#machineGifStart {
+    position: absolute;  
+    right: 16px;
+    display: flex;
+}
+
+/* Human Win GIF */
+#humanGifWin {
+    position: absolute;  
+    left: 16px;
+    display: none;
+}
+
+/* Machine Win GIF */
+#machineGifWin {
+   position: absolute;  
+   right: 16px;
+   display: none;
+}
+
+/* Human lose GIF */
+#humanGifLose {
+    position: absolute;  
+    left: 16px;
+    display: none;
+}
+  
+/* Machine lose GIF */
+#machineGifLose {
+    position: absolute;  
+    right: 16px;
+    display: none;
+}
+
+/* Human tie GIF */
+#humanGifTie {
+    position: absolute;  
+    left: 16px;
+    display: none;
+}
+ 
+/* Machine Tie GIF */
+#machineGifTie {
+    position: absolute;  
+    right: 16px;
+    display: none;
+}
+
+/* Human Invalid GIF */
+#humanGifInvalid {
+    position: absolute;  
+    left: 16px;
+    display: none;
+}
+ 
+/* Machine Invalid GIF */
+#machineGifInvalid {
+    position: absolute;  
+    right: 16px;
+    display: none;
 }
 
 h3 {
@@ -89,7 +154,7 @@ h4 {
     font-family: 'Poller One', cursive;
     text-align: center;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
 }
 
@@ -127,7 +192,8 @@ img:hover {
     flex-wrap: wrap;
 }
 
-.humanScore {
+.humanScore, 
+.machineScore {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -142,17 +208,12 @@ img:hover {
     border-radius: 20px;
 }
 
-.machineScore {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 150px;
-    margin: 10px auto 10px auto;
-    justify-content: center;
-    background-color: var(--sageGreen);
-    padding: 10px;
-    border: 6px solid  var(--mint);
-    box-shadow: 10px 5px 5px var(--darkBlue);
-    border-radius: 20px;
+#humanTally p,
+#machineTally p {
+    color: var(--salmon);
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.7em;
+    text-align: center;
 }

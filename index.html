@@ -14,19 +14,27 @@
         <h2>It's the HUMAN against the MACHINE!</h2>
 
         <!-- The human gif for the left side -->
-        <iframe src="https://giphy.com/embed/p4ga6qHRTc6GU0DiXg" width="250" height="250" frameBorder="0" id="humanGif" class="giphy-embed" allowFullScreen></iframe>
+        <iframe id="humanGifStart" class="giphy-embed" src="https://giphy.com/embed/p4ga6qHRTc6GU0DiXg" frameBorder="0" allowFullScreen></iframe>
+        <iframe id="humanGifWin" class="giphy-embed" src="https://giphy.com/embed/e73hFfx1LbEtTDSWby" frameBorder="0" allowFullScreen></iframe> 
+        <iframe id="humanGiLose" class="giphy-embed" src="https://giphy.com/embed/2tZtskpAzlzAlq2d9d" frameBorder="0" allowFullScreen></iframe> 
+        <iframe id="humanGifTie" class="giphy-embed" src="https://giphy.com/embed/QNR8s1hOiSywHg2Em9" frameBorder="0" allowFullScreen></iframe> 
+        <iframe id="humanGifInvalid" class="giphy-embed" src="https://giphy.com/embed/nd5E6nggu64b57CfIS" frameBorder="0" allowFullScreen></iframe> 
 
          <!-- The machine gif for the right side -->
-        <iframe src="https://giphy.com/embed/oUEshJh9D6P4GUXLPW" width="250" height="250" frameBorder="0" id="machineGif" class="giphy-embed" allowFullScreen></iframe>
+        <iframe id="machineGifStart" class="giphy-embed" src="https://giphy.com/embed/oUEshJh9D6P4GUXLPW" frameBorder="0" allowFullScreen></iframe>
+        <iframe id="machineGifWin" class="giphy-embed" src="https://giphy.com/embed/4wH0u6xNwPOUXJ9vZW"  frameBorder="0" allowFullScreen></iframe>
+        <iframe id="machineGifLose" class="giphy-embed" src="https://giphy.com/embed/SRPjYXdIEoU5WNVQHn" frameBorder="0" allowFullScreen></iframe> 
+        <iframe id="machineGifTie" class="giphy-embed" src="https://giphy.com/embed/bGOgSfQclSopZIxTKJ" frameBorder="0" allowFullScreen></iframe> 
+        <iframe id="machineGifInvalid" class="giphy-embed" src="https://giphy.com/embed/l1sgGc62MgVuLszFIk" frameBorder="0" allowFullScreen></iframe> 
     
         <!-- The Game! -->  
         <section class="game" id="game">
           <h4>Let's Play!</h4>
           <p>Choose One:</p>
             <ul>  
-              <li><img src="assets/images/rock.jpg" alt="Picture of a Rock"></li>
-              <li><img src="assets/images/paper.png" alt="Picture of Paper"></li>
-              <li><img src="assets/images/scissors.png" alt="Picture of Scissors"></li>
+              <li><img onclick="rockPaperScissors('R')" id="rock" src="assets/images/rock.jpg" alt="Picture of a Rock"></li>
+              <li><img onclick="rockPaperScissors('P')" id="paper" src="assets/images/paper.png" alt="Picture of Paper"></li>
+              <li><img onclick="rockPaperScissors('S')" id="scissors" src="assets/images/scissors.png" alt="Picture of Scissors"></li>
             </ul>  
         </section>
 
@@ -37,10 +45,12 @@
           
           <section id="#humanScore" class="humanScore">
             <h3>HUMAN WINS</h3>
+            <p id="humanTally"></p>
           </section>
         
           <section id="machineScore" class="machineScore">
             <h3>MACHINE WINS</h3>
+            <p id="machineTally"></p>
           </section>
 
         </section>
