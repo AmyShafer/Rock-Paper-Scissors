@@ -13,17 +13,21 @@ function rockPaperScissors(humanPick) {
   var didComputerWin = computerWins.indexOf(gameOutcome) > -1;
 
   if (humanPick === computerPick) {
-    document.getElementsByTagName("humanGifTie").style.display = flex;
-    document.getElementsByTagName("MachineGifTie").style.display = flex;
+    // changeHumanGif
+    // changeMachineGif
+    // no change to score
   } else if (didHumanWin) {
-    document.getElementsByTagName("humanGifWin").style.display = flex;
-    document.getElementsByTagName("MachineGifLose").style.display = flex;
+    // changeHumanGif
+    // changeMachineGif
+    // add one to human score
   } else if (didComputerWin) {
-    document.getElementsByTagName("humanGifLose").style.display = flex;
-    document.getElementsByTagName("MachineGifWin").style.display = flex;
+    // changeHumanGif
+    // changeMachineGif
+    // add one to machine score
   } else {
-    document.getElementsByTagName("humanGifInvalid").style.display = flex;
-    document.getElementsByTagName("MachineGifInvalid").style.display = flex;
+    // changeHumanGif
+    // changeMachineGif
+    // no change to score
   }
 
   return displayScoreboardUpdate(humanTally, machineTally);
@@ -49,8 +53,22 @@ function computerPlay(num) {
 
 function displayScoreboardUpdate (addHuman, addMachine) {
   
+}
 
-  
+function displayMessage (outcome) {
+  if (humanPick === computerPick) {
+    document.getElementsByTagName("humanGifTie").style.display = flex;
+    document.getElementsByTagName("MachineGifTie").style.display = flex;
+  } else if (didHumanWin) {
+    document.getElementsByTagName("humanGifWin").style.display = flex;
+    document.getElementsByTagName("MachineGifLose").style.display = flex;
+  } else if (didComputerWin) {
+    document.getElementsByTagName("humanGifLose").style.display = flex;
+    document.getElementsByTagName("MachineGifWin").style.display = flex;
+  } else {
+    document.getElementsByTagName("humanGifInvalid").style.display = flex;
+    document.getElementsByTagName("MachineGifInvalid").style.display = flex;
+  }
 }
 
 rockPaperScissors();
