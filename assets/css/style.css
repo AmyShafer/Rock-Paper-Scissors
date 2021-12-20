@@ -15,38 +15,35 @@
 
 body {
     background-color: var(--grey);
+    text-align: center;
 }
 
-h1 {
+main {
     display: flex;
     flex-direction: column;
     width: 700px;
     margin: 15px auto 15px auto;
     justify-content: center;
     align-items: center;
-    color: var(--darkBlue);
+}
+
+h1 {
     font-family: 'Poller One', cursive;
+    color: var(--darkBlue);
     font-size: 3em;
-    text-align: center;
+    margin-bottom: 20px;
     padding: 30px;
     border: 6px dotted var(--mint);
     border-radius: 15px;
 }
 
 h2 {
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    margin: 35px auto 35px auto;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Asap', sans-serif;
     background-color: var(--mint);
     color: var(--darkBlue);
-    font-family: 'Asap', sans-serif;
-    text-align: center;
-    font-weight: bolder;
     font-size: 2em;
-    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
 }
@@ -54,6 +51,7 @@ h2 {
 .giphy-embed {
     width: 250px;
     height: 250px;
+    margin-top: 50px;
 }
 
 /* Human Start GIF */
@@ -61,6 +59,7 @@ h2 {
     position: absolute;  
     left: 16px;
     display: flex;
+    z-index: 1;
 }
   
 /* Machine Start GIF */
@@ -68,85 +67,91 @@ h2 {
     position: absolute;  
     right: 16px;
     display: flex;
+    z-index: 1;
 }
 
 /* Human Win GIF */
 #humanGifWin {
     position: absolute;  
     left: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
 
 /* Machine Win GIF */
 #machineGifWin {
    position: absolute;  
    right: 16px;
-   display: none;
+   display: hidden;
+   z-index: -1;
 }
 
 /* Human lose GIF */
 #humanGifLose {
     position: absolute;  
     left: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
   
 /* Machine lose GIF */
 #machineGifLose {
     position: absolute;  
     right: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
 
 /* Human tie GIF */
 #humanGifTie {
     position: absolute;  
     left: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
  
 /* Machine Tie GIF */
 #machineGifTie {
     position: absolute;  
     right: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
 
 /* Human Invalid GIF */
 #humanGifInvalid {
     position: absolute;  
     left: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
  
 /* Machine Invalid GIF */
 #machineGifInvalid {
     position: absolute;  
     right: 16px;
-    display: none;
+    display: hidden;
+    z-index: -1;
 }
 
 h3 {
-    color: var(--darkBlue);
     font-family: 'Asap', sans-serif;
-    text-align: center;
-    font-weight: bolder;
+    color: var(--darkBlue);
     font-size: 2em;
-    text-align: center;
+    font-weight: bolder;
 }
 
 .game {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+    width: 60%;
     height: 300px;
-    margin: 10px auto 10px auto;
-    justify-content: center;
     background-color: var(--darkBlue);
-    padding: 10px;
+    margin: 10px auto 10px auto;
+    padding: 15px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
     border: 6px solid var(--sageGreen);
     box-shadow: 10px 5px 5px #233357;
-    border-radius: 20px;
 }
 
 h4 {
@@ -155,13 +160,11 @@ h4 {
     text-align: center;
     font-weight: bolder;
     font-size: 2.2em;
-    text-align: center;
 }
 
 p {
     color: lightgray;
     font-family: 'Asap', sans-serif;
-    text-align: center;
     font-weight: bolder;
     font-size: 1.7em;
     text-align: center;
@@ -190,30 +193,25 @@ img:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .humanScore, 
 .machineScore {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 300px;
     height: 150px;
-    margin: 10px auto 10px auto;
-    justify-content: center;
     background-color: var(--sageGreen);
     padding: 10px;
     border: 6px solid var(--mint);
-    box-shadow: 10px 5px 5px var(--darkBlue);
     border-radius: 20px;
+    box-shadow: 10px 5px 5px var(--darkBlue);
 }
 
 #humanTally p,
 #machineTally p {
-    color: var(--salmon);
     font-family: 'Asap', sans-serif;
-    text-align: center;
+    color: var(--salmon);
+    font-size: 1.1em;
     font-weight: bolder;
-    font-size: 1.7em;
     text-align: center;
 }
