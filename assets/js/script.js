@@ -3,25 +3,25 @@ var paper = document.getElementById("paper");
 var scissors = document.getElementById("scissors");
 
 function rockPaperScissors(humanPick) {
-  
-  var gameOutcome = humanPick + computerPick(3);
+  var computerPick = computerPlay(3);
+  var gameOutcome = humanPick + computerPick;
   var humanWins = ["RS", "PR", "SP"];
   var computerWins = ["RP", "PS", "SR"]; 
+  var tie = ["RR", "PP", "SS"];
   //var humanTally = 0;
   //var machineTally = 0;
 
   // These two variables are checking if the possible outcomes are in either the 
   // humanWins array or the computerWins array by using indexOf
-  var didHumanWin = humanWins.indexOf(gameOutcome) > -1;
-  var didComputerWin = computerWins.indexOf(gameOutcome) > -1;
+  var didHumanWin = humanWins.includes(gameOutcome);
+  var didComputerWin = computerWins.includes(gameOutcome);
+  var didPlayersTie = tie.includes(gameOutcome);
 
-  displayOutcome(gameOutcome, didHumanWin, didComputerWin);
-
-  console.log("Who wins? -- " + didHumanWin);
+  return displayOutcome(didHumanWin, didComputerWin, didPlayersTie);
 }
 
 // Helper Function
-function computerPick(num) {
+function computerPlay(num) {
   var play = "X";
   var getNumber = Math.floor(Math.random() * num);
 
@@ -33,30 +33,21 @@ function computerPick(num) {
       play = "S";
     }
 
-  console.log("(The Computer played: " + play + ")");  
-
   return play;
 }
 
 
-function displayOutcome (outcome, humanWin, computerWin) {
-  
+function displayOutcome (humanWin, computerWin, tie) {
   if (humanWin) {
-    document.getElementById("humanGifWin").style.display = "flex";
-    document.getElementById("humanGifWin").style.zIndex  = "1";
-    document.getElementById("machineGifLose").style.display = "flex";
-    document.getElementById("machineGifLose").style.zIndex  = "1";
+    document.getElementById("humanGif").src = "https://giphy.com/embed/e73hFfx1LbEtTDSWby";
+    document.getElementById("machineGif").src = "https://giphy.com/embed/7M3xyRsJMivb3MV5XP";
   } else if (computerWin) {
-    document.getElementById("humanGifLose").style.display = "flex";
-    document.getElementById("humanGifLose").style.zIndex  = "1";
-    document.getElementById("machineGifWin").style.display = "flex";
-    document.getElementById("machineGifWin").style.zIndex  = "1";
-  } else {
-    document.getElementById("humanGifTie").style.display = "flex";
-    document.getElementById("humanGifTie").style.zIndex = "1";
-    document.getElementById("machineGifTie").style.display = "flex";
-    document.getElementById("machineGifTie").style.zIndex  = "1";
-  }
+    document.getElementById("humanGif").src = "https://giphy.com/embed/Dg0T9uVL6MdE8WOAlp";
+    document.getElementById("machineGif").src = "https://giphy.com/embed/4wH0u6xNwPOUXJ9vZW";
+  } else if (tie) {
+    document.getElementById("humanGif").src = "https://giphy.com/embed/QNR8s1hOiSywHg2Em9";
+    document.getElementById("machineGif").src = "https://giphy.com/embed/bGOgSfQclSopZIxTKJ";
+  } 
 }
 
 

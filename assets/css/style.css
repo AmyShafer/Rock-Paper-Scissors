@@ -55,83 +55,17 @@ h2 {
 }
 
 /* Human Start GIF */
-#humanGifStart {
+#humanGif {
     position: absolute;  
     left: 16px;
     display: flex;
-    z-index: 1;
 }
   
 /* Machine Start GIF */
-#machineGifStart {
+#machineGif {
     position: absolute;  
     right: 16px;
     display: flex;
-    z-index: 1;
-}
-
-/* Human Win GIF */
-#humanGifWin {
-    position: absolute;  
-    left: 16px;
-    display: hidden;
-    z-index: -1;
-}
-
-/* Machine Win GIF */
-#machineGifWin {
-   position: absolute;  
-   right: 16px;
-   display: hidden;
-   z-index: -1;
-}
-
-/* Human lose GIF */
-#humanGifLose {
-    position: absolute;  
-    left: 16px;
-    display: hidden;
-    z-index: -1;
-}
-  
-/* Machine lose GIF */
-#machineGifLose {
-    position: absolute;  
-    right: 16px;
-    display: hidden;
-    z-index: -1;
-}
-
-/* Human tie GIF */
-#humanGifTie {
-    position: absolute;  
-    left: 16px;
-    display: hidden;
-    z-index: -1;
-}
- 
-/* Machine Tie GIF */
-#machineGifTie {
-    position: absolute;  
-    right: 16px;
-    display: hidden;
-    z-index: -1;
-}
-
-/* Human Invalid GIF */
-#humanGifInvalid {
-    position: absolute;  
-    left: 16px;
-    display: hidden;
-    z-index: -1;
-}
- 
-/* Machine Invalid GIF */
-#machineGifInvalid {
-    position: absolute;  
-    right: 16px;
-    display: hidden;
-    z-index: -1;
 }
 
 h3 {
