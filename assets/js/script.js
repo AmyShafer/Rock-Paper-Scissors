@@ -8,8 +8,6 @@ function rockPaperScissors(humanPick) {
   var humanWins = ["RS", "PR", "SP"];
   var computerWins = ["RP", "PS", "SR"]; 
   var tie = ["RR", "PP", "SS"];
-  //var humanTally = 0;
-  //var machineTally = 0;
 
   // These two variables are checking if the possible outcomes are in either the 
   // humanWins array or the computerWins array by using indexOf
@@ -17,7 +15,7 @@ function rockPaperScissors(humanPick) {
   var didComputerWin = computerWins.includes(gameOutcome);
   var didPlayersTie = tie.includes(gameOutcome);
 
-  return displayOutcome(didHumanWin, didComputerWin, didPlayersTie);
+  displayWinner(didHumanWin, didComputerWin, didPlayersTie);
 }
 
 // Helper Function
@@ -36,8 +34,8 @@ function computerPlay(num) {
   return play;
 }
 
-
-function displayOutcome (humanWin, computerWin, tie) {
+// Helper Function
+function displayWinner (humanWin, computerWin, tie) {
   if (humanWin) {
     document.getElementById("humanGif").src = "https://giphy.com/embed/e73hFfx1LbEtTDSWby";
     document.getElementById("machineGif").src = "https://giphy.com/embed/7M3xyRsJMivb3MV5XP";
@@ -48,8 +46,32 @@ function displayOutcome (humanWin, computerWin, tie) {
     document.getElementById("humanGif").src = "https://giphy.com/embed/QNR8s1hOiSywHg2Em9";
     document.getElementById("machineGif").src = "https://giphy.com/embed/bGOgSfQclSopZIxTKJ";
   } 
+
+  updateScoreboard(humanWin, computerWin);
 }
 
+// Helper Function
+function updateScoreboard(humanScore, computerScore) {
+  var humanPoints = 0;
+  var machinePoints = 0;
+  var humanTally =  document.getElementById("humanTally");
+  var machineTally = document.getElementById("machineTally");
+
+  if (humanScore) {
+    humanPoints++;
+    for (var i = 0; i < humanPoints; i++) {
+      localStorage.setItem("humanTally", "humanTally.length + 1");
+      humanTally.textContent += humanPoints; 
+    }
+  } else if (computerScore) {
+    machinePoints++;
+    for (var i = 0; i < machinePoints; i++) {
+      localStorage.setItem("machineTally", "machineTally.length + 1");
+      machineTally.textContent += machinePoints; 
+      
+    }
+  }
+}
 
 rock.addEventListener("click", rockPaperScissors);
 paper.addEventListener("click", rockPaperScissors);
